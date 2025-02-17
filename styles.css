@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Tilt+Neon:YROT@-12&display=swap');
+
+*{
+  
+}
+
+body{
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;  
+
+  
+    background-color: #060606;
+    color: #f9f9fd;
+    font-family: "Poppins", sans-serif;
+}/*
+
+.logo{
+margin-top: 40px;
+background-image: url(./images/shyama_golden_pattern.jpg);
+animation: textbackground 120s linear infinite;
+}
+
+.container {;
+    width: 100vw;
+    height: auto;
+    clip-path: url(#text-path);
+    }
+
+    @keyframes textbackground {
+      from {background-position: 0 0}
+      to { background-position: 100% 100%;}
+    }
+*/
+
+/**************** INDEX *****************/
+
+.logo svg{
+width: 30rem;  
+/*border: 3px solid plum;*/
+}
+
+.alebrije svg{
+  height: 40vh;
+/*  border: 3px solid rgb(32, 159, 85);*/
+}
+
+.logo, .alebrije {
+  display: flex;
+  align-self: center;
+}
+
+nav{
+
+  
+  height: auto;
+  width: 30%;
+  position: absolute;
+
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F0F4;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ ul li {
+ /* justify-content: space-around;*/
+ }
+nav a {
+  
+  color:rgb(15, 118, 209);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  
+}
+
+nav a:focus{
+  background-color: rgb(236, 134, 97);
+  color: #060606;
+}
+
+nav a:hover{
+  background-color: #4e24c2;
+  color: #F2F0F4;
+
+}
+
+@media screen and (min-width: 750px){
+
+  nav{
+  position: relative;
+  display: flex;
+  width: 100vw;
+ 
+}
+ nav ul {
+  flex-direction: row;
+  margin: 0 auto;
+ background-color: transparent;
+ } 
+li a {  
+    color: #333;    
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(106, 114, 108);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 5em;
+  z-index: -1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  opacity: 0;
+  transition: letter-spacing 0.5s;
+  width: 100vw;
+  height: 100vh;
+}
+a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  letter-spacing: 10px;
+}
+.logo svg{
+  width: 60vw;
+}
+
+.alebrije svg{
+  height: 50vh;
+}
+
+}
+
+#brazoAdelante{
+  animation: type .7s ease infinite;
+}
+
+#brazoAtras {
+  animation: type .6s ease-out 1s infinite;
+}
+
+#irisIzq, #pupilaIzq, #irisDer, #pupilaDer {
+  animation: blink 4s ease-in 5s infinite alternate;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+ }
+
+#laptop{  
+animation: shakey2 1s ease-in 8s 8;
+}
+
+@keyframes type {
+  50% { transform: translateX(6px) translateY(5px); }
+}
+
+@keyframes shakey2 {
+  33%{transform: rotateX(10deg) rotateY(15deg); }
+  66%{ transform: rotateX(0deg) rotateY(0deg); }
+  100%{ transform: rotateX(-5deg) rotateY(-10deg);}
+ }
+
+ @keyframes blink {
+  0% { opacity: 100;}
+  56% { opacity: 100;}
+  57% { opacity: 0;}
+  60% { opacity: 0;}
+  61% { opacity: 100;}
+
+ }
+ 
+.subtitulo{
+  text-align: center;
+  font-family: "Quicksand", serif;
+  font-weight: 100;
+  color: #333;
+
+}
+
+
+/**************** CONTACT *****************/
+
+#text-path {
+  color:#1B1B1F;
+  background-color: #7a3d97;
+}
+#contactPage{
+  background-color: #303033;
+  color: #F2F0F4;
+  text-align: justify;
+
+}
+
+#contactPage h1{
+  padding: 0;
+  margin: 0;
+}
+
+.bitter {
+  font-family: "Bitter", serif;
+  font-size: 4rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+main{
+  display: flex;
+  flex-flow: row;
+}
+
+#SPACEship {
+  z-index: 4;
+  overflow: visible;
+  max-height: 70vh;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding-top: 10vh;
+  
+}
+
+#infoContacto {
+  font-family: basic-sans, sans-serif;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  
+  line-height: 1.6;
+  border:3px solid #938317;
+  width: 50%;
+  font-size: clamp( 1rem + 10vw , 7rem);
+}
+
+#mensajeAlien, #alien {
+  visibility: hidden;
+}
+
+#luz-1, #luz-3, #luz5, #luz-5, #luz2, #luzGaus, #foco{
+animation: lights1 3s linear infinite;
+}
+
+#luz-2, #luz3, #luz-4, #luz1 {
+  animation: lights2 3s linear infinite;
+  }
+
+  #alien, #abductionLight {
+  animation: lights3 3s linear infinite;
+}
+
+@keyframes lights1 {
+ 0% {
+  fill:#49b96a;
+ }
+ 33% {
+  fill:#482b81;
+ }
+ 66% {
+  fill:#49b96a;
+ }
+ 100% {
+  fill:#7a3d97;
+ }
+
+}
+
+@keyframes lights2 {
+  0% {
+    fill:#7a3d97;
+  }
+  33% {
+    fill:#49b96a;
+  }
+  66% {
+    fill:#7a3d97;
+  }
+  100% {
+    fill:#482b81;
+  }
+ 
+ }
+
+ @keyframes lights3 {
+  0% {
+    fill:#a7ea15;
+  }
+  33% {
+    fill:#49b96a;
+  }
+  66% {
+    fill:#a7ea15;
+  }
+  100% {
+    fill:#15d195;
+  }
+ 
+ }
+
+ #spaceMsj {
+  transform-origin: center;  
+ 
+ animation-name: shake, fly;
+  animation-duration: 0.3s, 4s;
+  animation-iteration-count: 1;  
+ }
+
+ @keyframes fly {
+  33%{ transform: translateX(-6rem) translateY(-3rem); }
+  50%{ transform: translateX(0) translateY(-4rem); }
+  70%{ transform: translateX(8rem) translateY(-3rem); }
+  100% { transform: translateX(0) translateY(0);}
+ }
+
+ @keyframes shake {
+  33%{ transform: rotate(7deg); }
+  66%{ transform: rotate(0deg); }
+  100%{ transform: rotate(-7deg);}
+ }
+
+
+
+#spaceMsj:hover #mensajeAlien, #alien{
+  visibility: visible;
+}
+
+
+#letters {
+  animation: alargar 3s ease-in 1s infinite;
+}
+
+@keyframes alargar{
+  0% { transform: translateY(2rem);}  
+  100% { transform: skewY(-30deg); opacity: 0; }
+}
+
+/*
+footer {
+  
+}
+
+.socialMedia {
+  display: flex;
+  
+}
+
+.socialMedia li{
+  
+}
+*/
