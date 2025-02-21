@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Google icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     <link rel="stylesheet" href="styles.css" type="text/css" media="all">
     <title>Carolina's Portfolio Artwork</title>
 </head>
 <body>
+
+    <a href="#navbar" class="hamburger" aria-label="Open main menu">
+        <span class="sr-only"></span>
+        <span class="material-symbols-outlined" aria-hidden="true"> menu </span>
+    </a>
 
     <div class="logo">
 
@@ -41,15 +49,18 @@
         </svg>
     </div>
 
-    <nav>
+    <nav id="navbar">
         <ul>
             <li><a href="#" data-text="Know ME">About</a></li>
-            <li><a href="#" data-text="Coming soon">Shop</a></li>
-            <li><a href="#" data-text="See ME">Projects</a></li>
-            <li><a href="#" data-text="Contact ME">Contact</a></li>
-        
+            <!--<li><a href="#" data-text="Coming soon">Shop</a></li>-->
+            <li><a href="projects.html" data-text="See ME">Projects</a></li>
+            <li><a href="contact.html" data-text="Contact ME">Contact</a></li>        
         </ul>
-            </nav>
+            <a href="#" id="x" class="close" aria-label="Close main menu">
+            <span class="sr-only"></span>
+            <span class="material-symbols-outlined"> close </span>
+           </a>
+    </nav>
             
 
 <!--    <div class="logo container">          

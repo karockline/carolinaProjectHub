@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Tilt+Neon:YROT@-12&display=swap');
 
-*{
-  
-}
 
 body{
   margin: 0;
@@ -39,7 +36,8 @@ animation: textbackground 120s linear infinite;
 /**************** INDEX *****************/
 
 .logo svg{
-width: 30rem;  
+margin: 0 auto;
+width: clamp(15rem, 30rem, 30%);  
 /*border: 3px solid plum;*/
 }
 
@@ -53,19 +51,37 @@ width: 30rem;
   align-self: center;
 }
 
+.hamburger, .close{
+  font-size: 2rem;
+  font-weight: 900;
+}
+.hamburger{
+  color: #F2F0F4;
+}
+.hamburger:hover{
+  color: salmon;
+}
 nav{
-
-  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #F2F0F4;
   height: auto;
   width: 30%;
   position: absolute;
+  z-index: 200;
 
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+}
+nav:target {
+  transform: translateY(0);
 }
 
 nav ul {
   display: flex;
   flex-direction: column;
-  background-color: #F2F0F4;
+ 
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -80,7 +96,7 @@ nav a {
   font-size: 1.5rem;
   font-weight: 600;
   display: block;
-  
+  padding: 0.7rem;
 }
 
 nav a:focus{
@@ -99,8 +115,14 @@ nav a:hover{
   nav{
   position: relative;
   display: flex;
+  flex-direction: row;
+  background-color: transparent;
   width: 100vw;
+  top: 3rem;
  
+}
+.hamburger, .close{
+  display: none;
 }
  nav ul {
   flex-direction: row;
@@ -207,12 +229,12 @@ animation: shakey2 1s ease-in 8s 8;
   background-color: #303033;
   color: #F2F0F4;
   text-align: justify;
-
 }
 
 #contactPage h1{
   padding: 0;
-  margin: 0;
+  margin: 0 ;
+  text-align: center;
 }
 
 .bitter {
